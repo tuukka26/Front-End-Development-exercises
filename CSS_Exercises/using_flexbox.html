@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Flexbox</title>
+    <style>
+          
+        .child1 {
+            
+            width: 70px;
+            border: 1px solid black;
+            text-align: left;
+            padding: 30px 15px 30px 15px;
+            margin: 15px;
+           
+        }
+        
+        .child2 {
+            
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 30px 15px 30px 15px;
+            margin: 15px;
+            
+        }
+        
+        .flexbox {
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            
+        .flexbox {
+            
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            }
+            
+        .child1 {
+                
+                width: 150px;
+                text-align: center;
+
+            }
+            
+        .child2 {
+                
+                width: 250px;
+                text-align: center;
+            }
+        }
+    
+    </style>
+</head>
+    
+    <body>
+    
+        <h1>Using Flexbox</h1>
+        <div class="flexbox">
+        <div class="child1">This is the first section</div>
+        <div class="child1">Here is some more text</div>
+        <div class="child2">Text continues in this section</div>
+        <div class="child1">Is there more coming?</div>
+        <div class="child1">This is the final section</div>
+        </div>
+    
+    </body>
+
+</html>
