@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using jquery / Simple image gallery with plug-in</title>  
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="viewbox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Image gallery made with Viewbox plug-in</h1>
+        <div class="row p-4" style="background-color: lightgrey">
+            <div class="col-sm-4">
+                <a href="images/alligatorcrocodile.jpg" class="thumbnail" title="Alligator">
+                  <img src="images/alligatorcrocodile_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/amphibians.jpg" class="thumbnail" title="Amphibian">
+                  <img src="images/amphibians_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/baldeagles.jpg" class="thumbnail" title="Bald eagle">
+                  <img src="images/baldeagles_thumb.jpeg" alt="" class="rounded mx-auto d-block">   
+                </a>
+            </div>
+        </div>
+        <div class="row p-4" style="background-color: darkgrey">
+            <div class="col-sm-4">
+                <a href="images/bats.jpg" class="thumbnail" title="Bat">
+                    <img src="images/bats_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/bear.jpg" class="thumbnail" title="Bear">
+                    <img src="images/bear_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/birds.jpg" class="thumbnail" title="Bird">
+                    <img src="images/birds_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+        </div>
+                <div class="row p-4" style="background-color: lightgrey">
+            <div class="col-sm-4">
+                <a href="images/panda.jpg" class="thumbnail" title="Panda">
+                    <img src="images/panda_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/sloth.jpg" class="thumbnail" title="Sloth">
+                    <img src="images/sloth_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="images/tiger.jpg" class="thumbnail" title="Tiger">
+                    <img src="images/tiger_thumb.jpeg" alt="" class="rounded mx-auto d-block">
+                </a>
+            </div>
+        </div>
+        <p>Images downloaded from <a href="http://www.pics4learning.com/">Pics4Learning</a></p>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+<script src="jquery.viewbox.min.js"></script>
+
+<script>
+
+  $(document).ready(function() {
+      $('.thumbnail').viewbox({
+
+  // template
+  template: '<div class="viewbox-container"><div class="viewbox-body"><div class="viewbox-header"></div><div class="viewbox-content"></div><div class="viewbox-footer"></div></div></div>',
+
+  // loading spinner
+  loader: '<div class="loader"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>',
+  setTitle: true,
+  margin: 20,
+  resizeDuration: 300,
+  openDuration: 200,
+  closeDuration: 200,
+  closeButton: true,
+  navButtons: true,
+  closeOnSideClick: true,
+  nextOnContentClick: true
+  
+});
+
+  });
+</script>
+
+</body>
+</html>
